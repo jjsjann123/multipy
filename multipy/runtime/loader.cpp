@@ -721,6 +721,9 @@ void resolve_needed_libraries(
       // torchvision expects it...
       continue;
     }
+    if (strcmp(name, "libnvfuser_python.so") == 0) {
+      continue;
+    }
     // find the library, either (1) it is already loaded,
     //                          (2) it is an absolute path that exists,
     //                          (3) we find it in the search path
